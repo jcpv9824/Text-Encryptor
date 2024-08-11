@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Text Encryptor</title>
+</head>
+<body>
+    <header>
+        <img src="./assets/Logo.png" alt="Logo">
+        <p class="header-text">Text Encrytor developed by <b>Juan Camilo Palacio</b></p>
+    </header>
+    <main>
+        <section class="left-section">
+            <textarea placeholder="Enter your text here" class="input-textarea"></textarea>
+            <p class="info-message"> 
+                <img src="./assets/exclamationMark.png" alt="Exclamation Mark" class="info-icon"> 
+                Only lowercase letters and no accents
+            </p>
+            <div class="buttons">
+                <button onclick="encryptText();" class="encrypt-button">Encrypt</button>
+                <button onclick="decyptText();" class="decrypt-button">Decrypt</button>
+            </div>
+        </section>
+        <section class="right-section" id="visible">
+            <img src="./assets/Muneco.png" alt="Muneco" class="display-image">
+            <div class="message-container">
+                <h2>No message was found</h2>
+                <p>Enter the text that you want to encrypt or decrypt</p>
+            </div>
+        </section>
+        <section class="right-section-hidden" id="hidden">
+            <div class="result-container">
+                <p class="result-text"></p>
+                <button onclick="copy();" class="copy-button">Copy</button>
+            </div>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
